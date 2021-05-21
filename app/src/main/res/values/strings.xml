@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Edukasi Bahasa Isyarat</string>
+    <string name="judul_halaman_depan">Aplikasi Edukasi\nBahasa Isyarat</string>
+    <string name="judul_menu2">Pilih yang Ingin\nAnda Pelajari</string>
+    <string name="about_text">\t\t\tAplikasi ini dibuat oleh  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu aliquam eros. Etiam in turpis pretium, porta tellus et, auctor enim. Ut sodales dignissim luctus. Proin vel massa ac mauris ullamcorper blandit in nec massa. Nulla facilisi. Morbi at facilisis justo, non varius neque. Suspendisse vel pulvinar tortor. Nullam tempor dolor quis neque commodo, non congue tellus vestibulum. Nulla auctor urna vel sem ullamcorper feugiat. Suspendisse molestie elit at sollicitudin molestie. Quisque eu enim vehicula, iaculis lectus eu, accumsan velit. Cras sed eleifend sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur id tincidunt metus. Nam convallis mollis sem, a consectetur neque auctor non. Vivamus sed fermentum ante. Cras elementum tellus sapien, et mollis tellus pellentesque sed. Sed laoreet laoreet scelerisque. Curabitur pretium nunc at odio pulvinar, sit amet aliquet dolor scelerisque. Phasellus at purus ut dui tempor porta eget vel ex.  </string>
+</resources>
