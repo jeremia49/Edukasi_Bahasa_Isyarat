@@ -7,21 +7,28 @@
     >
 
     <ImageView
-        android:id="@+id/icon"
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:src="@drawable/background_button"
         android:scaleX="2"
         android:scaleY="1"
-
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_marginTop="50dp"
         >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_marginLeft="5dp"
+            />
 
         <TextView
             android:id="@+id/title"
@@ -33,7 +40,8 @@
             android:layout_marginLeft="10dp"
             android:padding="2dp"
             android:textColor="@color/white"
-            android:layout_gravity="left|center_vertical"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
             />
 
     </LinearLayout>
