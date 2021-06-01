@@ -5,34 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/bg"
+    android:background="@color/white"
     android:orientation="vertical"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:orientation="vertical"
         >
-        <TextView
-            android:layout_marginTop="50dp"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/judul_menu2"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            />
+            android:layout_height="match_parent"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="-30dp"
+            android:requiresFadingEdge="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/background"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+
+                />
+            <TextView
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="Selamat Datang,"
+                android:textSize="31sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"
+                />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="90dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="Ingin belajar apa hari ini ?"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="6"
+        android:layout_weight="5"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Pilih Topik :"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"
+            />
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,64 +85,179 @@
             android:layout_gravity="center"
             >
 
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:text="Salam"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:drawableTint="@color/grey"
-                android:drawableTop="@drawable/ic_baseline_clean_hands_24"
-                android:layout_margin="20dp"
                 android:onClick="selectSalam"
-                />
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button"
+                    >
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_salam"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="20sp"
+                        android:text="Salam"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        />
 
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:text="Angka"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:drawableTint="@color/grey"
-                android:drawableTop="@drawable/ic_baseline_clean_hands_24"
-                android:layout_margin="20dp"
                 android:onClick="selectAngka"
-                />
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button"
+                    >
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_angka"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="20sp"
+                        android:text="Angka"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:text="Alfabet"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:drawableTint="@color/grey"
-                android:drawableTop="@drawable/ic_baseline_clean_hands_24"
-                android:layout_margin="20dp"
                 android:onClick="selectAlfabet"
-                />
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button"
+                    >
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_alfabet"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="20sp"
+                        android:text="Alfabet"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:text="Keluarga"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:drawableTint="@color/grey"
-                android:drawableTop="@drawable/ic_baseline_clean_hands_24"
-                android:layout_margin="20dp"
                 android:onClick="selectKeluarga"
-                />
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button"
+                    >
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_keluarga"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="18sp"
+                        android:text="Keluarga"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
 
         </GridLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:background="@color/biru"
+        android:onClick="sendToAbout"
+        >
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/info"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"
+                android:text="Tentang"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+
+                />
+
+
     </LinearLayout>
 </LinearLayout>

@@ -9,9 +9,8 @@ import android.widget.TextView
 import pw.jere.edukasi_tunarunggu.R
 
 
-class VideoList(context: Context, title: List<String>, subjudul : List<String>) : ArrayAdapter<String>(context, R.layout.list_item, title) {
+class VideoList(context: Context, title: List<String>) : ArrayAdapter<String>(context, R.layout.list_item, title) {
     val _title = title;
-    val _subjudul = subjudul;
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -19,12 +18,12 @@ class VideoList(context: Context, title: List<String>, subjudul : List<String>) 
 
         val titleText = rowView.findViewById<View>(R.id.title) as TextView
 //        val imageView: ImageView = rowView.findViewById<View>(R.id.icon) as ImageView
-        val subtitleText = rowView.findViewById<View>(R.id.subtitle) as TextView
+//        val subtitleText = rowView.findViewById<View>(R.id.subtitle) as TextView
 
 
         titleText.setText(_title.get(position))
 //        imageView.setImageResource(imgid.get(position))
-        subtitleText.setText(_subjudul.get(position))
+//        subtitleText.setText(_subjudul.get(position))
 
         return rowView
     }

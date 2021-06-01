@@ -1,7 +1,9 @@
 package pw.jere.edukasi_tunarunggu
 
+import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.TextView
@@ -18,35 +20,44 @@ class SelectMateriActivity : AppCompatActivity() {
 
         setContentView(R.layout.select_materi_view)
 
+        window?.decorView?.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+
+        val actionBar: ActionBar? = actionBar
+        actionBar?.hide()
+
+
         val judul = intent.getStringExtra("judul").toString()
         findViewById<TextView>(R.id.select_judul).setText(judul)
 
         val subbab : HashMap<String,List<String>> = HashMap()
-        subbab.put("Salam", listOf( "Salam 1", "Salam 2" , "Salam 3", "Salam 4"))
-        subbab.put("Alfabet", listOf( "Alfabet 1", "Alfabet 2" , "Alfabet 4", "Alfabet 5"))
-        subbab.put("Angka", listOf( "Angka 1", "Angka 2" , "Angka 3", "Angka 4"))
-        subbab.put("Keluarga", listOf( "Keluarga 1", "Keluarga 2" , "Keluarga 3", "Keluarga 5"))
+        subbab.put("Salam", listOf( "Selamat Pagi", "Selamat Siang" , "Selamat Sore", "Selamat Malam", "Selamat Idul Fitri", "Selamat Natal"))
+        subbab.put("Alfabet", listOf( "Huruf A", "Huruf B", "Huruf C", "Huruf D", "Huruf E", "Huruf F", "Huruf G", "Huruf H", "Huruf I", "Huruf J", "Huruf K", "Huruf L", "Huruf M", "Huruf N", "Huruf O", "Huruf P", "Huruf Q", "Huruf R", "Huruf S", "Huruf T", "Huruf U", "Huruf V", "Huruf W", "Huruf X", "Huruf Y", "Huruf Z"))
+        subbab.put("Angka", listOf( "Angka 1", "Angka 2", "Angka 3", "Angka 4", "Angka 5", "Angka 6", "Angka 7", "Angka 8", "Angka 9", "Angka 10"))
+        subbab.put("Keluarga", listOf("Ayah", "Ibu", "Kakek", "Nenek", "Om", "Tante", "Abang", "Kakak", "Adek", "Sepupu"))
 
-        val deskripsi : HashMap<String,List<String>> = HashMap()
-        deskripsi.put("Salam", listOf( "Salam 1", "Salam 2" , "Salam 3", "Salam 4"))
-        deskripsi.put("Alfabet", listOf( "Alfabet 1", "Alfabet 2" , "Alfabet 4", "Alfabet 5"))
-        deskripsi.put("Angka", listOf( "Angka 1", "Angka 2" , "Angka 3", "Angka 4"))
-        deskripsi.put("Keluarga", listOf( "Keluarga 1", "Keluarga 2" , "Keluarga 3", "Keluarga 5"))
+        val deskripsi : HashMap<String,String> = HashMap()
+        deskripsi.put("Salam", "Berikut adalah beberapa\ncara salam")
+        deskripsi.put("Alfabet", "Berikut adalah beberapa\nalfabet")
+        deskripsi.put("Angka", "Berikut adalah beberapa\nangka")
+        deskripsi.put("Keluarga", "Berikut adalah beberapa\nanggota keluarga")
 
-        val videoURL : HashMap<String,List<String>> = HashMap()
-        videoURL.put("Salam", listOf( "https://nobar.jeremia.co/vid/new/y2mate.com%20-%20%E9%97%87%E9%9F%B3%E3%83%AC%E3%83%B3%E3%83%AAYou%20and%20beautiful%20worldUTAU%E3%82%AB%E3%83%90%E3%83%BC_v720P.mp4", "Salam 2" , "Salam 3", "Salam 4"))
-        videoURL.put("Alfabet", listOf( "https://nobar.jeremia.co/vid/y2mate.com%20-%20Kano%20Interviewer_480p.mp4", "Alfabet 2" , "Alfabet 4", "Alfabet 4"))
-        videoURL.put("Angka", listOf( "Angka 1", "Angka 2" , "Angka 3", "Angka 4"))
-        videoURL.put("Keluarga", listOf( "Keluarga 1", "Keluarga 2" , "Keluarga 3", "Keluarga 4"))
+        val videoURL : HashMap<String,List<Int>> = HashMap()
+        videoURL.put("Salam", listOf(R.raw.selamat_pagi,R.raw.selamat_siang_,R.raw.selamat_sore,R.raw.selamat_malam,R.raw.selamat_idul_fitri_,R.raw.selamat_natal_ ))
+        videoURL.put("Alfabet", listOf(R.raw.a, R.raw.b, R.raw.c, R.raw.d, R.raw.e, R.raw.f, R.raw.g, R.raw.h, R.raw.i, R.raw.j, R.raw.k, R.raw.l, R.raw.m, R.raw.n, R.raw.o, R.raw.p, R.raw.q, R.raw.r, R.raw.s, R.raw.t, R.raw.u, R.raw.v, R.raw.w, R.raw.x, R.raw.y, R.raw.z))
+        videoURL.put("Angka", listOf(R.raw.satu, R.raw.dua, R.raw.tiga, R.raw.empat, R.raw.lima, R.raw.enam, R.raw.tujuh, R.raw.delapan, R.raw.sembilan, R.raw.sepuluh))
+        videoURL.put("Keluarga", listOf(R.raw.ayah, R.raw.ibu, R.raw.kakek, R.raw.nenek, R.raw.om, R.raw.tante, R.raw.abang, R.raw.kakak, R.raw.adek, R.raw.sepupu))
 
         val s_subbab : List<String> = subbab.get(judul).orEmpty()
-        val s_deskripsi : List<String> = deskripsi.get(judul).orEmpty()
+        val s_deskripsi : String = deskripsi.get(judul).orEmpty()
 
-        val listAdapter =  VideoList(this, s_subbab,s_deskripsi)
+        findViewById<TextView>(R.id.deskripsi_judul).setText(s_deskripsi)
+
+        val listAdapter =  VideoList(this, s_subbab)
 
         val list = findViewById<ListView>(R.id.listview)
         list.adapter = listAdapter
-
 
         list.setOnItemClickListener { _, _, position, _ ->
                     startActivity(Intent(this,VideoActivity::class.java).apply {
@@ -56,5 +67,10 @@ class SelectMateriActivity : AppCompatActivity() {
                     })
                 }
             }
-        }
+
+    public fun backbtn(view:View){
+        super.onBackPressed()
+    }
+
+}
 
