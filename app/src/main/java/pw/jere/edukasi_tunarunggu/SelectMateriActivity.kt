@@ -49,7 +49,7 @@ class SelectMateriActivity : AppCompatActivity() {
         videoURL.put("Angka", listOf(R.raw.satu, R.raw.dua, R.raw.tiga, R.raw.empat, R.raw.lima, R.raw.enam, R.raw.tujuh, R.raw.delapan, R.raw.sembilan, R.raw.sepuluh))
         videoURL.put("Keluarga", listOf(R.raw.ayah, R.raw.ibu, R.raw.kakek, R.raw.nenek, R.raw.om, R.raw.tante, R.raw.abang, R.raw.kakak, R.raw.adek, R.raw.sepupu))
 
-        val s_icon : List<Int> = listOf(R.drawable.ic_ayah,R.drawable.ic_ibu,R.drawable.ic_kakek,R.drawable.ic_nenek,R.drawable.ic_om,R.drawable.ic_tante, R.drawable.ic_kakak,R.drawable.ic_abang,R.drawable.ic_adik,R.drawable.ic_sepupu)
+        val s_icon : List<Int> = listOf(R.drawable.ic_ayah,R.drawable.ic_ibu,R.drawable.ic_kakek,R.drawable.ic_nenek,R.drawable.ic_om,R.drawable.ic_tante,R.drawable.ic_abang, R.drawable.ic_kakak,R.drawable.ic_adik,R.drawable.ic_sepupu)
 
 
         val s_subbab : List<String> = subbab.get(judul).orEmpty()
